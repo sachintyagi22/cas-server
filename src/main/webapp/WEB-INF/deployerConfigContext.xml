@@ -232,7 +232,7 @@
 -->
 <bean id="ldapAuthenticationHandler"
       class="org.jasig.cas.authentication.LdapAuthenticationHandler"
-      p:principalIdAttribute="uid"
+      p:principalIdAttribute="mail"
       c:authenticator-ref="authenticator">
     <property name="principalAttributeMap">
         <map>
@@ -271,12 +271,38 @@
    | The following DN format works for many directories, but may need to be
    | customized.
    -->
-<bean id="dnResolver"
-      class="org.ldaptive.auth.FormatDnResolver"
-      c:format="${ldap.authn.format}" />
+<bean id="dnResolver" class="org.ldaptive.auth.PooledSearchDnResolver"
+      p:baseDn="${ldap.authn.baseDn}"
+      p:allowMultipleDns="false"
+      p:connectionFactory-ref="searchPooledLdapConnectionFactory"
+      p:userFilter="${ldap.authn.searchFilter}" />
 
 <bean id="authHandler" class="org.ldaptive.auth.PooledBindAuthenticationHandler"
-      p:connectionFactory-ref="pooledLdapConnectionFactory" />
+      p:connectionFactory-ref="bindPooledLdapConnectionFactory" />
+
+<bean id="bindPooledLdapConnectionFactory"
+      class="org.ldaptive.pool.PooledConnectionFactory"
+      p:connectionPool-ref="bindConnectionPool" />
+
+<bean id="bindConnectionPool" parent="abstractConnectionPool" />
+
+<!-- <bean id="authHandler" class="org.ldaptive.auth.PooledBindAuthenticationHandler"
+      p:connectionFactory-ref="pooledLdapConnectionFactory" /> -->
+
+<bean id="searchPooledLdapConnectionFactory"
+      class="org.ldaptive.pool.PooledConnectionFactory"
+      p:connectionPool-ref="searchConnectionPool" />
+
+<bean id="searchConnectionPool" parent="abstractConnectionPool" />
+
+<bean id="abstractConnectionPool" abstract="true"
+      class="org.ldaptive.pool.BlockingConnectionPool"
+      init-method="initialize"
+      p:poolConfig-ref="ldapPoolConfig"
+      p:blockWaitTime="${ldap.pool.blockWaitTime}"
+      p:validator-ref="searchValidator"
+      p:pruneStrategy-ref="pruneStrategy"
+      p:connectionFactory-ref="connectionFactory" />
 
 <bean id="pooledLdapConnectionFactory"
       class="org.ldaptive.pool.PooledConnectionFactory"
