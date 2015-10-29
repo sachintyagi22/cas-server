@@ -22,15 +22,29 @@
 
       </div> <!-- END #content -->
       
+
+    </div> <!-- END #container -->
+    
       <footer>
         <!--<div id="copyright">
           <p><spring:message code="copyright" /></p>
           <p>Powered by <a href="http://www.jasig.org/cas">Jasig Central Authentication Service <%=org.jasig.cas.CasVersion.getVersion()%></a></p>
         </div>-->
+		<div class="footer-container">
+			<div class="footer-section" style="float:left;">
+				<!--<p class="footer-section-title">Corridor</p>
+				<p class="footer-content">Helping foster innovation by investing in people and ideas. Combining technology expertise with entrepreneurial skills to help build creative solutions.</p>-->
+				<p class="footer-content">Copyright&nbsp;&copy;&nbsp;2015</p>
+			</div>
+			<div class="footer-section" style="float:right;">
+				<!--<p class="footer-section-title">Need Help?</p>
+				<p class="footer-address"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;Midtown, Banjara Hills, Hyderabad</p>
+				<p class="footer-address"><i class="fa fa-phone"></i>&nbsp;&nbsp;&nbsp;+91-40-3355 2000</p>
+				<p class="footer-address"><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;info@pramati.com</p>
+				<p class="footer-address"><i class="fa fa-globe"></i>&nbsp;&nbsp;&nbsp;www.pramati.com</p>-->
+			</div>
+		</div>
       </footer>
-
-    </div> <!-- END #container -->
-    
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     
