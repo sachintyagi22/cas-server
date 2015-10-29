@@ -71,7 +71,7 @@ if (auto != null && auto.equals("true")) {
         </c:when>
         <c:otherwise>
           <spring:message code="screen.welcome.label.netid.accesskey" var="userNameAccessKey" />
-          <form:input cssClass="required" cssErrorClass="error" id="username" size="25" tabindex="1" accesskey="${userNameAccessKey}" path="username" autocomplete="off" htmlEscape="true" />
+          <form:input cssClass="required" cssErrorClass="error" id="username" size="25" tabindex="1" accesskey="${userNameAccessKey}" path="username" autocomplete="off" htmlEscape="true" placeholder="EMAIL ID" />
         </c:otherwise>
       </c:choose>
     </section>
@@ -85,13 +85,13 @@ if (auto != null && auto.equals("true")) {
       http://www.technofundo.com/tech/web/ie_autocomplete.html
       --%>
       <spring:message code="screen.welcome.label.password.accesskey" var="passwordAccessKey" />
-      <form:password cssClass="required" cssErrorClass="error" id="password" size="25" tabindex="2" path="password"  accesskey="${passwordAccessKey}" htmlEscape="true" autocomplete="off" />
+      <form:password cssClass="required" cssErrorClass="error" id="password" size="25" tabindex="2" path="password"  accesskey="${passwordAccessKey}" htmlEscape="true" autocomplete="off"  placeholder="Password" />
     </section>
     
-    <section class="row check">
+    <!--<section class="row check">
       <input id="warn" name="warn" value="true" tabindex="3" accesskey="<spring:message code="screen.welcome.label.warn.accesskey" />" type="checkbox" />
       <label for="warn"><spring:message code="screen.welcome.label.warn" /></label>
-    </section>
+    </section>-->
     
     <section class="row btn-row">
       <input type="hidden" name="lt" value="${loginTicket}" />
@@ -99,7 +99,7 @@ if (auto != null && auto.equals("true")) {
       <input type="hidden" name="_eventId" value="submit" />
 
       <input class="btn-submit" name="submit" accesskey="l" value="<spring:message code="screen.welcome.button.login" />" tabindex="4" type="submit" />
-      <input class="btn-reset" name="reset" accesskey="c" value="<spring:message code="screen.welcome.button.clear" />" tabindex="5" type="reset" />
+      <!--<input class="btn-reset" name="reset" accesskey="c" value="<spring:message code="screen.welcome.button.clear" />" tabindex="5" type="reset" />-->
     </section>
   </form:form>
   

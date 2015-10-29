@@ -38,59 +38,6 @@
   <link rel="icon" href="<c:url value="/favicon.ico" />" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Seaweed+Script">
 
-  <style>
-	.bg-img{
-		background: url('images/Photo7-min.jpg') no-repeat;
-		background-size: cover;
-	}
-	header{
-		background: rgba(250, 203, 59, 0.85) none repeat scroll 0 0 !important;
-		box-shadow: 0 -1px 0 0 rgba(255, 255, 255, 0.2) inset !important;
-		background: #facb3b none repeat scroll 0 0;
-		height: 97px;
-	}
-	.journey-msg{
-		line-height: 1.1;
-		margin: 20px 0 50px;
-		width: 60%;
-	}
-	.journey-msg h1{
-		color: #ffffff;
-		font-family: "Seaweed Script",cursive;
-		font-size: 60px;
-		font-weight: 300;
-	}
-	.logo{
-		float: left;
-		padding-left: 50px;
-		width: 100px;
-	}
-	.https-msg{
-		background-color: transparent;
-		border: none;
-		float: left;
-		margin-left: 111px;
-	}
-	#content{
-		background-color: transparent;
-		float: left;
-	}
-	#fm1{
-		background-color: #333333 !important;
-	}
-	#login-form input[type="text"], 
-	#login-form input[type="password"] {
-	  background-color: #e9e9e9;
-	  border: 1px solid #444;
-	  border-radius: 4px;
-	  color: #a6a6a5;
-	  font-size: 18px;
-	  font-weight: 100;
-	  padding: 16px 10%;
-	  width: 80%;
-	}
-  </style>
-  
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
   <![endif]-->
@@ -102,7 +49,7 @@
 			<a href="http://cev3.pramati.com/"><img class="logo_transparent" alt="Corridor" src="images/logo_corridor.png"></a>
 		</div>
 		<c:if test="${not pageContext.request.secure}">
-		  <div id="msg" class="errors https-msg" style="background-color: transparent !important; border: none !important;">
+		  <div id="msg" class="errors https-msg">
 			<h2>Non-secure Connection</h2>
 			<p>You are currently accessing CAS over a non-secure connection.  Single Sign On WILL NOT WORK.  In order to have single sign on work, you MUST log in over HTTPS.</p>
 		  </div>
