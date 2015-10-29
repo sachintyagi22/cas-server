@@ -173,7 +173,7 @@
             <property name="id" value="1" />
             <property name="name" value="HTTP and IMAP on example.com" />
             <property name="description" value="Allows HTTP(S) and IMAP(S) protocols on example.com" />
-            <property name="serviceId" value="^(http?|imaps?)://.*" />
+            <property name="serviceId" value="^(http?|imaps?|https?)://.*" />
             <property name="evaluationOrder" value="0" />
 	    <property name="allowedToProxy" value="true" />
 	    <!-- <property name="accessStrategy"><bean class="org.jasig.cas.services.DefaultRegisteredServiceAccessStrategy" c:ssoEnabled="true" c:enabled="true" p:requireAllAttributes="false"></bean></property> -->

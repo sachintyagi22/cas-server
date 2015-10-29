@@ -68,7 +68,7 @@
     </init-param>
     <init-param>
       <param-name>onlyPostParameters</param-name>
-      <param-value></param-value>
+      <param-value>username password</param-value>
     </init-param>
   </filter>
   <!--
