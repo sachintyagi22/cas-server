@@ -37,7 +37,8 @@
   <link rel="stylesheet" href="<c:url value="${customCssFile}" />" />
   <link rel="icon" href="<c:url value="/favicon.ico" />" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Seaweed+Script">
-
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,700">	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
   <![endif]-->
