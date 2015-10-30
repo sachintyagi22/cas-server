@@ -189,7 +189,7 @@ header{
 #content{
 	background-color: transparent;
 	float: left;
-	min-height: 550px;
+	min-height: 81vh;
 }
 #login{
 	width: 350px;
