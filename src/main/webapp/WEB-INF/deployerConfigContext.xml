@@ -245,7 +245,6 @@
 -->
 <bean id="ldapAuthenticationHandler"
       class="org.jasig.cas.authentication.LdapAuthenticationHandler"
-      p:principalIdAttribute="mail"
       c:authenticator-ref="authenticator">
     <property name="principalAttributeMap">
         <map>
